@@ -1,0 +1,3 @@
+[submodule "3rd/tracy"]
+	path = 3rd/tracy
+	url = https://bitbucket.org/wolfpld/tracy.git
