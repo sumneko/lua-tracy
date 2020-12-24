@@ -23,7 +23,7 @@ lm:shared_library 'lua-tracy' {
         '.',
     },
     sources = {
-        'tracy.cpp',
+        'lua-tracy.cpp',
         '3rd/tracy/tracyClient.cpp',
     },
     links = {
@@ -34,5 +34,5 @@ lm:shared_library 'lua-tracy' {
     defines = {
         'TRACY_ENABLE',
     },
-    ldflags = '/EXPORT:luaopen_tracy'
+    ldflags = '/EXPORT:luaopen_lua_tracy'
 }
