@@ -24,11 +24,15 @@ lm:shared_library 'lua-tracy' {
     },
     sources = {
         'tracy.cpp',
-        '3rd/tracy/common/*.cpp',
-        '3rd/tracy/client/*.cpp',
+        '3rd/tracy/tracyClient.cpp',
     },
     links = {
         'dbghelp',
+        'Advapi32',
+        'User32',
+    },
+    defines = {
+        'TRACY_ENABLE',
     },
     ldflags = '/EXPORT:luaopen_tracy'
 }

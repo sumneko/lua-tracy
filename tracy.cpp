@@ -1,4 +1,3 @@
-#define TRACY_ENABLE
 extern "C" {
 #include "lua.h"
 #include "lualib.h"
