@@ -15,7 +15,7 @@ lm:shared_library 'lua54' {
     }
 }
 
-lm:shared_library 'lua-tracy' {
+lm:shared_library 'luatracy' {
     deps = "lua54",
     includes = {
         '3rd/lua',
@@ -23,7 +23,7 @@ lm:shared_library 'lua-tracy' {
         '.',
     },
     sources = {
-        'lua-tracy.cpp',
+        'luatracy.cpp',
         '3rd/tracy/tracyClient.cpp',
     },
     links = {
@@ -34,5 +34,5 @@ lm:shared_library 'lua-tracy' {
     defines = {
         'TRACY_ENABLE',
     },
-    ldflags = '/EXPORT:luaopen_lua_tracy'
+    ldflags = '/EXPORT:luaopen_luatracy'
 }
